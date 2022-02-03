@@ -14,6 +14,7 @@ class DatabaseHelper {
   Future<Database> get database async => _db ?? await _initDatabase();
 
   Future<Database> _initDatabase() async {
+    /// ошибка тут исправить не смог
     var db = await databaseFactory.openDatabase(inMemoryDatabasePath);
     Directory documentsDirectory = await getApplicationDocumentsDirectory();
     return openDatabase(
